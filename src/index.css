@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 20% 98%;
+    --foreground: 100 50% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 100 50% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 100 50% 12%;
+    --primary: 100 50% 20%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 122 39% 49%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 150 10% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 122 39% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 100 50% 20%;
+    --chart-1: 122 39% 49%;
+    --chart-2: 100 50% 20%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 145 63% 42%;
+    --chart-5: 145 63% 49%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 100 50% 12%;
+    --foreground: 150 20% 98%;
+    --card: 100 50% 15%;
+    --card-foreground: 150 20% 98%;
+    --popover: 100 50% 15%;
+    --popover-foreground: 150 20% 98%;
+    --primary: 122 39% 49%;
+    --primary-foreground: 100 50% 12%;
+    --secondary: 100 50% 20%;
+    --secondary-foreground: 150 20% 98%;
+    --muted: 100 50% 20%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 122 39% 49%;
+    --accent-foreground: 100 50% 12%;
+    --destructive: 0 63% 60%;
+    --destructive-foreground: 150 20% 98%;
+    --border: 100 50% 20%;
+    --input: 100 50% 20%;
+    --ring: 122 39% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+
+    font-family: Inter, sans-serif;
+  }
+}
+
+@layer components {
+  .ksb-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  }
+  
+  .ksb-card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+  
+  .ksb-metric {
+    @apply text-2xl font-semibold text-primary;
+  }
+  
+  .ksb-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .ksb-badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .ksb-badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .ksb-badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+}
